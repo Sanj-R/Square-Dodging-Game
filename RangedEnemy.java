@@ -21,7 +21,7 @@ public class RangedEnemy extends FrameComponent {
 	static int moveInterval = 50;
 	static boolean moveActive = false;
 	boolean still = false;
-	static int shootInterval = 100;
+	static int shootInterval = 10;
     static boolean shootActive = false;
 	static HashMap<Integer, HashSet<RangedEnemy>> enemiesMoveMap = new HashMap<Integer, HashSet<RangedEnemy>>();
 	static HashMap<Integer, HashSet<RangedEnemy>> enemiesShootMap = new HashMap<Integer, HashSet<RangedEnemy>>();
@@ -87,22 +87,7 @@ public class RangedEnemy extends FrameComponent {
 	
 	public void shoot() {
 		
-		double distanceToPlayer1 = distanceBetween(model, targetUsed);
-		double distanceToPlayer2 = distanceBetween(model, targetUsed2);
-		
-		JLabel btarget = null;
-		JLabel btarget2 = null;
-		
-		if (distanceToPlayer1 >= distanceToPlayer2) {
-			btarget = targetUsed2;
-			btarget2 = targetUsed;
-		}
-		else {
-			btarget = targetUsed;
-			btarget2 = targetUsed2;
-		}
-		
-		new Bullet(frameUsed, model.getX() + 10, model.getY() + 10, btarget, btarget2, 10);
+		new Bullet(frameUsed, model.getX() + 10, model.getY() + 10, targetUsed, targetUsed2, 10);
 	}
 	
 	public int initialCoordGenX() {
