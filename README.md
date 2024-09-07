@@ -1,5 +1,5 @@
 # Square-Dodging-Game
-#### A 2-D Game in Which You Dodge Squares...
+#### A multiplayer 2-D Game in Which You Dodge Squares...
 #### Made with Java Swing
 
 
