@@ -21,7 +21,7 @@ public class RangedEnemy extends FrameComponent {
 	static int moveInterval = 50;
 	static boolean moveActive = false;
 	boolean still = false;
-	static int shootInterval = 10;
+	static int shootInterval = 100;
     static boolean shootActive = false;
 	static HashMap<Integer, HashSet<RangedEnemy>> enemiesMoveMap = new HashMap<Integer, HashSet<RangedEnemy>>();
 	static HashMap<Integer, HashSet<RangedEnemy>> enemiesShootMap = new HashMap<Integer, HashSet<RangedEnemy>>();
